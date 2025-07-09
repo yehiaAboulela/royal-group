@@ -1,0 +1,349 @@
+/* Contact Hero Section */
+.contact-hero {
+  background: linear-gradient(
+    135deg,
+    var(--color-bg-blue) 0%,
+    var(--color-bg-main) 100%
+  );
+  padding: 4rem 0 2rem;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-text-light);
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Contact Content Section */
+.contact-content {
+  padding: 4rem 0;
+  background: white;
+}
+
+.contact-info {
+  background: var(--color-bg-main);
+  padding: 2.5rem;
+  border-radius: 12px;
+  height: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.info-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+  margin-bottom: 1rem;
+}
+
+.info-description {
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.contact-items {
+  margin-bottom: 2.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  background: #39bda7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.contact-icon i {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.contact-details h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+  margin-bottom: 0.25rem;
+}
+
+.contact-details a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-details a:hover {
+  color: #39bda7;
+}
+
+.contact-details span {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+/* Social Links */
+.social-links {
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.5rem;
+}
+
+.social-links h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid var(--color-border);
+}
+
+.social-link:hover {
+  background: #39bda7;
+  color: white;
+  transform: translateY(-2px);
+  border-color: #39bda7;
+}
+
+/* Contact Form */
+.contact-form-wrapper {
+  background: var(--color-bg-main);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--color-text-light);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.form-control {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  background: white;
+}
+
+.form-control:focus {
+  border-color: #39bda7;
+  box-shadow: 0 0 0 0.2rem rgba(57, 189, 167, 0.25);
+  background: white;
+}
+
+.form-control.ng-invalid.ng-touched {
+  border-color: #dc3545;
+}
+
+.invalid-feedback {
+  display: block;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: #dc3545;
+}
+
+.animated-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Alert Messages */
+.alert {
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+}
+
+.alert-success {
+  background-color: rgba(57, 189, 167, 0.1);
+  color: #155724;
+  border-left: 4px solid #39bda7;
+}
+
+.alert-danger {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: #721c24;
+  border-left: 4px solid #dc3545;
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 4rem 0;
+  background: var(--color-bg-main);
+}
+
+.faq-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+  margin-bottom: 3rem;
+}
+
+.accordion {
+  --bs-accordion-border-color: var(--color-border);
+  --bs-accordion-bg: white;
+  --bs-accordion-btn-color: var(--color-text-light);
+  --bs-accordion-btn-bg: white;
+  --bs-accordion-btn-focus-border-color: #39bda7;
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(57, 189, 167, 0.25);
+  --bs-accordion-active-color: #39bda7;
+  --bs-accordion-active-bg: rgba(57, 189, 167, 0.05);
+}
+
+.accordion-item {
+  border-radius: 8px !important;
+  margin-bottom: 1rem;
+  border: 1px solid var(--color-border) !important;
+}
+
+.accordion-button {
+  font-weight: 600;
+  padding: 1.25rem 1.5rem;
+  border-radius: 8px !important;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #39bda7;
+  background-color: rgba(57, 189, 167, 0.05);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.accordion-body {
+  padding: 1.5rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .contact-content {
+    padding: 2rem 0;
+  }
+
+  .contact-info,
+  .contact-form-wrapper {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-item {
+    padding: 0.75rem;
+  }
+
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contact-icon i {
+    font-size: 1rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .faq-section {
+    padding: 2rem 0;
+  }
+
+  .faq-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-hero {
+    padding: 2rem 0 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .contact-info,
+  .contact-form-wrapper {
+    padding: 1rem;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .contact-icon {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .animated-button {
+    width: 100%;
+    text-align: center;
+  }
+}

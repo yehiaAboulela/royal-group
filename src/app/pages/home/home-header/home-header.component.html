@@ -1,0 +1,76 @@
+<header>
+  <div class="hero-container">
+    <!-- Desktop/Tablet Version - Split Layout -->
+    <div class="hero-content d-lg-block d-none">
+      <div class="hero-split">
+        <!-- Left Side - Content -->
+        <div class="hero-left">
+          <div class="content">
+            <h1>Royal Group</h1>
+            <h2>Leaders in Surface Protection Technology</h2>
+            <p>
+              Royal Group is an Egyptian holding company powering premium brands
+              in nano-ceramic and industrial coating technologies.
+            </p>
+
+            <div class="content-actions">
+              <a href="#services" class="animated-button">
+                <i class="fas fa-arrow-right"></i>
+                Explore Solutions
+              </a>
+              <a href="#about" class="btn-secondary">
+                <i class="fas fa-info-circle"></i>
+                Discover Royal Group
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side - Image -->
+        <div class="hero-right">
+          <img
+            [src]="heroImage"
+            [alt]="heroImageAlt || 'Royal Group – Surface Protection Experts'"
+            class="hero-image"
+            [style.display]="heroImage ? 'block' : 'none'"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Version -->
+    <div class="hero-mobile d-lg-none d-block">
+      <div class="hero-mobile-content">
+        <h1 class="fst-italic">Royal Group</h1>
+        <h2>Surface Protection, Reinvented</h2>
+        <p>
+          We power leading brands in nano-ceramic technology, built to protect
+          vehicles, marine equipment, and more.
+        </p>
+        <p>Innovation. Reliability. Performance.</p>
+
+        <div class="content-actions">
+          <a href="#services" class="btn-primary">
+            <i class="fas fa-arrow-right"></i>
+            Our Solutions
+          </a>
+          <a href="#about" class="btn-secondary">
+            <i class="fas fa-info-circle"></i>
+            About Royal Group
+          </a>
+        </div>
+      </div>
+
+      <!-- Mobile Image -->
+      <img
+        [src]="heroImage"
+        [alt]="
+          heroImageAlt ||
+          'Royal Group – Nano Ceramic & Surface Protection Experts'
+        "
+        class="hero-mobile-image"
+        [style.display]="heroImage ? 'block' : 'none'"
+      />
+    </div>
+  </div>
+</header>

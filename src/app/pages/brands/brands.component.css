@@ -1,0 +1,532 @@
+/* Brands Hero Section */
+.brands-hero {
+  background: linear-gradient(
+    135deg,
+    var(--color-bg-blue) 0%,
+    var(--color-bg-main) 100%
+  );
+  padding: 4rem 0 2rem;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+/* Group Overview Section */
+.group-overview {
+  padding: 4rem 0;
+  background: white;
+}
+
+.overview-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
+}
+
+.overview-description {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.group-stats {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #39bda7;
+  line-height: 1;
+  animation: countUp 2s ease-out;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.overview-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.group-logo {
+  text-align: center;
+  padding: 2rem;
+  background: var(--color-bg-main);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.group-logo:hover {
+  transform: translateY(-5px);
+}
+
+.logo-circle {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #39bda7, #2a9d8f);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  animation: pulse 2s infinite;
+}
+
+.logo-text {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.group-logo h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+  margin-bottom: 0.5rem;
+}
+
+.group-logo p {
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin: 0;
+}
+
+/* Brands Portfolio Section */
+.brands-portfolio {
+  padding: 4rem 0;
+  background: var(--color-bg-main);
+}
+
+.portfolio-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-light);
+  margin-bottom: 1rem;
+}
+
+.portfolio-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Brand Cards */
+.brand-card {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.brand-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--brand-color, #39bda7),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.brand-card:hover::before {
+  opacity: 1;
+}
+
+/* Brand-specific colors */
+.nano-ceramic {
+  --brand-color: #3b82f6;
+}
+
+.hypred {
+  --brand-color: #ef4444;
+}
+
+.luxe-interiors {
+  --brand-color: #f59e0b;
+}
+
+.tech-solutions {
+  --brand-color: #8b5cf6;
+}
+
+/* Brand Content */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.logo-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.logo-icon:hover {
+  transform: scale(1.1);
+}
+
+.nano-icon {
+  background: linear-gradient(135deg, #3b82f6, #1e40af);
+}
+
+.hypred-icon {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.luxe-icon {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.tech-icon {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.brand-logo h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+.brand-tagline {
+  font-size: 1rem;
+  color: var(--brand-color, #39bda7);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.brand-description {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.brand-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  opacity: 0;
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.feature-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.feature-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.feature-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.feature-item i {
+  width: 20px;
+  color: var(--brand-color, #39bda7);
+  font-size: 1rem;
+}
+
+.feature-item span {
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+/* Brand Buttons */
+.brand-btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid var(--brand-color, #39bda7);
+  color: var(--brand-color, #39bda7);
+  background: transparent;
+}
+
+.brand-btn:hover {
+  background: var(--brand-color, #39bda7);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Brand Visuals */
+.brand-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  position: relative;
+}
+
+.brand-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.brand-image:hover {
+  transform: scale(1.05);
+}
+
+/* Call to Action Section */
+.brands-cta {
+  padding: 4rem 0;
+  background: white;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-light);
+  margin-bottom: 1rem;
+}
+
+.cta-description {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+}
+
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cta-link {
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--color-text-light);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.cta-link:hover {
+  background: var(--color-text-light);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Simple Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes countUp {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .logo-icon {
+    margin-inline-end: 10px;
+    margin-bottom: 0;
+  }
+
+  .overview-title,
+  .portfolio-title,
+  .cta-title {
+    font-size: 2rem;
+  }
+
+  .brand-card {
+    padding: 2rem;
+  }
+
+  .brand-visual {
+    margin-top: 2rem;
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .brands-hero {
+    padding: 2rem 0 1rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .group-overview,
+  .brands-portfolio,
+  .brands-cta {
+    padding: 2rem 0;
+  }
+
+  .brand-card {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .group-stats {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+  }
+
+  .animated-button,
+  .cta-link {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .brand-card {
+    padding: 1rem;
+  }
+
+  .brand-features {
+    gap: 0.5rem;
+  }
+
+  .feature-item {
+    gap: 0.25rem;
+  }
+
+  .logo-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .brand-logo h3 {
+    font-size: 1.5rem;
+  }
+}

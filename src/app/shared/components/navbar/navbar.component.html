@@ -1,0 +1,135 @@
+<nav
+  [ngClass]="{
+    'navbar-home': isHome,
+    'navbar-default': !isHome,
+    'navbar-scrolled': isScrolled
+  }"
+>
+  <div class="navbar-container">
+    <!-- Logo with enhanced styling -->
+    <div class="logo-container">
+      <img
+        src="https://static.cdnlogo.com/logos/l/65/lorem-lorem.svg"
+        alt="Royal Group"
+        class="logo"
+        routerLink="/"
+        (click)="closeMobileMenu()"
+      />
+      <span class="logo-text" routerLink="/" (click)="closeMobileMenu()"
+        >Royal Group</span
+      >
+    </div>
+
+    <!-- Enhanced toggle for mobile -->
+    <button
+      class="nav-toggle d-lg-none"
+      (click)="toggleMobileMenu()"
+      [class.active]="menuOpen"
+      aria-label="Toggle navigation"
+    >
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+    <!-- Enhanced nav links and dropdown -->
+    <div class="nav-links" [class.open]="menuOpen">
+      <ul class="list-unstyled links mb-0">
+        <li>
+          <a
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            (click)="closeMobileMenu()"
+          >
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a
+            routerLink="/about"
+            routerLinkActive="active"
+            (click)="closeMobileMenu()"
+          >
+            <span>About</span>
+          </a>
+        </li>
+        <li>
+          <a
+            routerLink="/contact"
+            routerLinkActive="active"
+            (click)="closeMobileMenu()"
+          >
+            <span>Contact</span>
+          </a>
+        </li>
+        <li>
+          <a
+            routerLink="/brands"
+            routerLinkActive="active"
+            (click)="closeMobileMenu()"
+          >
+            <span>Brands</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Enhanced dropdown -->
+      <div class="my-dropdown" (mouseleave)="closeDropdown()">
+        <button
+          class="dropdown-toggle my-dropdown-button"
+          [ngClass]="{
+            'dark-style': isHome,
+            'light-style': !isHome,
+            active: isDropDownActive
+          }"
+          type="button"
+          (click)="toggleDropdown()"
+          (mouseenter)="isDropDownActive = true"
+        >
+          <span>Our Media</span>
+        </button>
+        <ul
+          class="my-dropdown-menu list-unstyled"
+          [class.show]="isDropDownActive"
+        >
+          <li>
+            <a href="#" (click)="closeMobileMenu()">
+              <i class="fab fa-facebook"></i>
+              <span>Facebook</span>
+              <i class="fas fa-external-link-alt external-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" (click)="closeMobileMenu()">
+              <i class="fab fa-instagram"></i>
+              <span>Instagram</span>
+              <i class="fas fa-external-link-alt external-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" (click)="closeMobileMenu()">
+              <i class="fab fa-tiktok"></i>
+              <span>TikTok</span>
+              <i class="fas fa-external-link-alt external-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" (click)="closeMobileMenu()">
+              <i class="fab fa-linkedin-in"></i>
+              <span>LinkedIn</span>
+              <i class="fas fa-external-link-alt external-icon"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Mobile menu overlay -->
+    <div
+      class="mobile-overlay"
+      [class.active]="menuOpen"
+      (click)="closeMobileMenu()"
+    ></div>
+  </div>
+</nav>
