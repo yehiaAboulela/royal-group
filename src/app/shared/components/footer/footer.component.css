@@ -266,44 +266,113 @@
 }
 
 @media (max-width: 767.98px) {
+  .footer-main .row {
+    flex-direction: column;
+  }
+  .footer-main > .container > .row > div {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .footer-brand,
+  .footer-contact,
+  .footer-links {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .footer-brand img {
+    margin: 0 auto 1rem auto;
+    display: block;
+  }
+  .footer-links ul {
+    padding-left: 0;
+  }
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+  .footer-contact .contact-item {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .footer-newsletter {
+    padding: 1.2rem 0;
+  }
+  .newsletter-form .input-group {
+    flex-direction: column;
+    gap: 0.5rem;
+    box-shadow: none;
+  }
+  .newsletter-input {
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  .newsletter-btn {
+    width: 100%;
+    border-radius: 8px;
+    font-size: 1rem;
+    padding: 12px 0;
+    justify-content: center;
+  }
+  .footer-bottom {
+    padding: 1rem 0;
+  }
+  .footer-bottom .row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
   .footer-bottom-links {
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
+    margin-top: 0.5rem;
   }
-
+  .bottom-link {
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    display: inline-block;
+  }
   .social-links {
     justify-content: center;
     margin-top: 1rem;
+    gap: 1.25rem;
   }
-
-  .newsletter-input {
-    border-radius: 8px 8px 0 0;
+  .social-link {
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
 @media (max-width: 575.98px) {
   .footer-main {
-    padding: 2.5rem 0 1rem;
+    padding: 1.5rem 0 0.5rem;
   }
-
   .footer-newsletter {
-    padding: 1.5rem 0;
+    padding: 1rem 0;
   }
-
-  .contact-item {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
+  .footer-bottom {
+    padding: 0.75rem 0;
   }
-
-  .social-links {
+  .footer-bottom-links {
     gap: 0.75rem;
   }
-
   .social-link {
-    width: 36px;
-    height: 36px;
-    font-size: 1rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
   }
 }

@@ -1,17 +1,25 @@
-/* Enhanced navbar.component.css */
 nav {
   width: 100%;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border-bottom: 1px solid var(--color-border);
   padding: 16px 32px;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
+.navbar-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
 
-/* Enhanced theme styles with scroll effects */
+.navbar-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
 .navbar-home {
   background-color: var(--color-bg-main);
   color: black !important;
@@ -409,6 +417,10 @@ nav {
 
   .nav-toggle {
     display: flex;
+  }
+
+  .fa-arrow-down {
+    display: none;
   }
 
   .nav-links {

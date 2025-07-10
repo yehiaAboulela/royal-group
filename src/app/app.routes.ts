@@ -40,5 +40,15 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/terms/terms.component').then((m) => m.TermsComponent),
   },
+  {
+    path: 'vision',
+    loadComponent: () =>
+      import('./pages/vision/vision.component').then((m) => m.VisionComponent),
+  },
+  {
+    path: 'values',
+    loadComponent: () =>
+      import('./pages/values/values.component').then((m) => m.ValuesComponent),
+  },
   { path: '**', redirectTo: '' },
 ];

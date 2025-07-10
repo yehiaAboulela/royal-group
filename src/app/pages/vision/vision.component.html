@@ -1,0 +1,108 @@
+<div class="vision-container">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-crown"></i>
+        <span>Royal Group EG</span>
+      </div>
+      <h1 class="hero-title">Our Vision</h1>
+      <p class="hero-subtitle">
+        Shaping Egypt's Future Through Excellence in Real Estate Development
+      </p>
+      <div class="hero-description">
+        <p>
+          At Royal Group EG, we envision a future where innovative architecture
+          meets sustainable living, creating communities that inspire growth,
+          prosperity, and connection across Egypt and beyond.
+        </p>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="vision-icon">
+        <div class="icon-circle">
+          <i class="fas fa-eye fa-3x"></i>
+        </div>
+        <div class="floating-elements">
+          <div class="floating-element floating-element-1"></div>
+          <div class="floating-element floating-element-2"></div>
+          <div class="floating-element floating-element-3"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision Statement -->
+  <section class="vision-statement section-radius">
+    <div class="statement-content">
+      <h2>Vision Statement</h2>
+      <blockquote class="main-statement">
+        "To be the leading force in transforming Egypt's real estate landscape
+        through innovative, sustainable, and community-focused developments that
+        set new standards for excellence and create lasting value for
+        generations to come."
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Vision Pillars -->
+  <section class="vision-pillars">
+    <div class="pillars-header">
+      <h2>Our Vision Pillars</h2>
+      <p>
+        Four fundamental principles that guide our journey toward excellence
+      </p>
+    </div>
+    <div class="pillars-grid">
+      @for (point of visionPoints; track $index) {
+      <div class="pillar-card section-radius">
+        <div class="pillar-icon">
+          <span class="icon">{{ point.icon }}</span>
+        </div>
+        <h3>{{ point.title }}</h3>
+        <p>{{ point.description }}</p>
+      </div>
+      }
+    </div>
+  </section>
+
+  <!-- Future Milestones -->
+  <section class="milestones-section section-radius">
+    <div class="milestones-header">
+      <h2>Our Vision Timeline</h2>
+      <p>
+        Key milestones on our journey to transform Egypt's real estate landscape
+      </p>
+    </div>
+    <div class="milestones-timeline">
+      @for (milestone of milestones; track $index) {
+      <div class="milestone-item">
+        <div class="milestone-year">
+          <span class="numbers">{{ milestone.year }}</span>
+        </div>
+        <div class="milestone-content">
+          <h4>{{ milestone.title }}</h4>
+          <p>{{ milestone.description }}</p>
+        </div>
+      </div>
+      }
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Join Our Vision</h2>
+      <p>
+        Be part of Egypt's transformation. Discover how Royal Group EG is
+        building the future of real estate development.
+      </p>
+      <a
+        [routerLink]="['/brands']"
+        routerLinkActive="router-link-active"
+        class="animated-button"
+        >Explore Our Projects</a
+      >
+    </div>
+  </section>
+</div>

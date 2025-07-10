@@ -2,7 +2,9 @@
   [ngClass]="{
     'navbar-home': isHome,
     'navbar-default': !isHome,
-    'navbar-scrolled': isScrolled
+    'navbar-scrolled': isScrolled,
+    'navbar-hidden': !isVisible,
+    'navbar-visible': isVisible
   }"
 >
   <div class="navbar-container">
@@ -77,7 +79,7 @@
       <!-- Enhanced dropdown -->
       <div class="my-dropdown" (mouseleave)="closeDropdown()">
         <button
-          class="dropdown-toggle my-dropdown-button"
+          class="my-dropdown-button"
           [ngClass]="{
             'dark-style': isHome,
             'light-style': !isHome,
@@ -88,36 +90,44 @@
           (mouseenter)="isDropDownActive = true"
         >
           <span>Our Media</span>
+          <span class="dropdown-arrow" [class.rotated]="isDropDownActive">
+            <i class="fa fa-arrow-down"></i>
+          </span>
         </button>
         <ul
           class="my-dropdown-menu list-unstyled"
           [class.show]="isDropDownActive"
         >
           <li>
-            <a href="#" (click)="closeMobileMenu()">
+            <a
+              target="_blank"
+              href="https://www.facebook.com/RoyalNanoCeramic"
+              (click)="closeMobileMenu()"
+            >
               <i class="fab fa-facebook"></i>
               <span>Facebook</span>
               <i class="fas fa-external-link-alt external-icon"></i>
             </a>
           </li>
           <li>
-            <a href="#" (click)="closeMobileMenu()">
+            <a
+              target="_blank"
+              href="https://www.instagram.com/royalnanoceramic/"
+              (click)="closeMobileMenu()"
+            >
               <i class="fab fa-instagram"></i>
               <span>Instagram</span>
               <i class="fas fa-external-link-alt external-icon"></i>
             </a>
           </li>
           <li>
-            <a href="#" (click)="closeMobileMenu()">
+            <a
+              target="_blank"
+              href="https://www.tiktok.com/@royalnanoceramic"
+              (click)="closeMobileMenu()"
+            >
               <i class="fab fa-tiktok"></i>
               <span>TikTok</span>
-              <i class="fas fa-external-link-alt external-icon"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#" (click)="closeMobileMenu()">
-              <i class="fab fa-linkedin-in"></i>
-              <span>LinkedIn</span>
               <i class="fas fa-external-link-alt external-icon"></i>
             </a>
           </li>

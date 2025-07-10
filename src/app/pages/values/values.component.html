@@ -1,0 +1,143 @@
+<div class="values-container">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-gem"></i>
+        <span>Our Foundation</span>
+      </div>
+      <h1 class="hero-title">Our Values</h1>
+      <p class="hero-subtitle">
+        The principles that guide every decision and shape our legacy
+      </p>
+      <div class="hero-description">
+        <p>
+          At Royal Group EG, our values are more than words on a page—they are
+          the foundation of our culture, the compass for our decisions, and the
+          promise we make to our clients, partners, and communities.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Values Grid -->
+  <section class="values-grid-section">
+    <div class="section-header">
+      <h2>Core Values</h2>
+      <p>
+        Six fundamental principles that define who we are and how we operate
+      </p>
+    </div>
+
+    <div class="values-grid">
+      @for (value of coreValues; track value.id) {
+      <div
+        class="value-card"
+        [class.active]="selectedValue?.id === value.id"
+        (click)="selectValue(value)"
+      >
+        <div class="value-icon">
+          <i [class]="value.icon"></i>
+        </div>
+        <h3>{{ value.title }}</h3>
+        <p>{{ value.description }}</p>
+
+        @if (selectedValue?.id === value.id) {
+        <div class="value-details">
+          <h4>Key Aspects:</h4>
+          <ul>
+            @for (detail of value.details; track $index) {
+            <li>{{ detail }}</li>
+            }
+          </ul>
+        </div>
+        }
+
+        <div class="expand-indicator">
+          <i
+            class="fas fa-chevron-down"
+            [class.rotated]="selectedValue?.id === value.id"
+          ></i>
+        </div>
+      </div>
+      }
+    </div>
+  </section>
+
+  <!-- Principles Section -->
+  <section class="principles-section section-radius">
+    <div class="section-header">
+      <h2>Guiding Principles</h2>
+      <p>The operational framework that translates our values into action</p>
+    </div>
+
+    <div class="principles-list">
+      @for (principle of principles; track $index) {
+      <div class="principle-item">
+        <div class="principle-number">
+          <span class="numbers">{{ principle.number }}</span>
+        </div>
+        <div class="principle-content">
+          <h3>{{ principle.title }}</h3>
+          <p>{{ principle.description }}</p>
+        </div>
+      </div>
+      }
+    </div>
+  </section>
+
+  <!-- Values in Action -->
+  <section class="values-action-section">
+    <div class="section-header">
+      <h2>Values in Action</h2>
+      <p>How our values translate into tangible impact</p>
+    </div>
+
+    <div class="action-grid">
+      <div class="action-card">
+        <div class="action-icon">
+          <i class="fas fa-award"></i>
+        </div>
+        <h3>Quality Assurance</h3>
+        <p>
+          Every project undergoes rigorous quality checks to ensure we deliver
+          excellence that stands the test of time.
+        </p>
+      </div>
+
+      <div class="action-card">
+        <div class="action-icon">
+          <i class="fas fa-seedling"></i>
+        </div>
+        <h3>Sustainable Practices</h3>
+        <p>
+          We implement eco-friendly construction methods and materials to
+          minimize our environmental footprint.
+        </p>
+      </div>
+
+      <div class="action-card">
+        <div class="action-icon">
+          <i class="fas fa-handshake"></i>
+        </div>
+        <h3>Community Engagement</h3>
+        <p>
+          We actively participate in local initiatives and create spaces that
+          strengthen community bonds.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Experience Our Values</h2>
+      <p>
+        Discover how our commitment to these values creates exceptional real
+        estate experiences.
+      </p>
+      <a [routerLink]="['/contact']" class="animated-button">Work With Us</a>
+    </div>
+  </section>
+</div>
