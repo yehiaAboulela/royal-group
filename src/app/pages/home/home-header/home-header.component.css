@@ -1,5 +1,3 @@
-/* Enhanced Split Hero Header Styles */
-
 header {
   width: 100%;
   min-height: calc(100vh - 99px);
@@ -10,6 +8,18 @@ header {
   justify-content: center;
   position: relative;
   padding: 2rem 0;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-container {
@@ -34,6 +44,18 @@ header {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   align-items: center;
+  animation: slideInUp 1.2s ease-out 0.2s both;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-split {
@@ -61,6 +83,233 @@ header {
   overflow: hidden;
 }
 
+.decorative-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.decorative-elements-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Circle Decorations */
+.decoration-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease;
+  animation: float 8s ease-in-out infinite;
+}
+
+.decoration-circle.decoration-1 {
+  width: 80px;
+  height: 80px;
+  top: 20%;
+  right: 15%;
+  animation-delay: 0s;
+}
+
+.decoration-circle.decoration-2 {
+  width: 60px;
+  height: 60px;
+  bottom: 30%;
+  right: 25%;
+  animation-delay: 2s;
+}
+
+/* Square Decoration */
+.decoration-square {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: rgba(57, 189, 167, 0.15);
+  border: 2px solid rgba(57, 189, 167, 0.3);
+  transform: rotate(45deg);
+  transition: all 0.4s ease;
+  animation: rotate 12s linear infinite;
+}
+
+.decoration-square.decoration-3 {
+  top: 60%;
+  right: 10%;
+}
+
+/* Triangle Decoration */
+.decoration-triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 40px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+  animation: bounce 6s ease-in-out infinite;
+}
+
+.decoration-triangle.decoration-4 {
+  top: 15%;
+  right: 35%;
+  animation-delay: 1s;
+}
+
+/* Dots Decoration */
+.decoration-dots {
+  position: absolute;
+  display: flex;
+  gap: 8px;
+  transition: all 0.4s ease;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.decoration-dots.decoration-5 {
+  top: 45%;
+  right: 5%;
+  animation-delay: 0.5s;
+}
+
+.decoration-dots::before,
+.decoration-dots::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: rgba(57, 189, 167, 0.6);
+  border-radius: 50%;
+}
+
+.decoration-dots::after {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Line Decoration */
+.decoration-line {
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(57, 189, 167, 0.5),
+    transparent
+  );
+  transform: rotate(-45deg);
+  transition: all 0.4s ease;
+  animation: slide 10s ease-in-out infinite;
+}
+
+.decoration-line.decoration-6 {
+  bottom: 20%;
+  right: 40%;
+  animation-delay: 3s;
+}
+
+/* Hover Effects for Decorative Elements */
+.hero-right:hover .decoration-circle {
+  transform: scale(1.2);
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.hero-right:hover .decoration-square {
+  transform: rotate(225deg) scale(1.1);
+  background: rgba(57, 189, 167, 0.25);
+  border-color: rgba(57, 189, 167, 0.5);
+}
+
+.hero-right:hover .decoration-triangle {
+  transform: scale(1.3);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.hero-right:hover .decoration-dots::before,
+.hero-right:hover .decoration-dots::after {
+  background: rgba(57, 189, 167, 0.8);
+  transform: scale(1.2);
+}
+
+.hero-right:hover .decoration-line {
+  width: 80px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(57, 189, 167, 0.8),
+    transparent
+  );
+}
+
+/* Mobile Hover Effects */
+.hero-mobile:hover .decoration-circle {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.hero-mobile:hover .decoration-square {
+  transform: rotate(225deg) scale(1.05);
+  background: rgba(57, 189, 167, 0.2);
+}
+
+.hero-mobile:hover .decoration-dots::before,
+.hero-mobile:hover .decoration-dots::after {
+  background: rgba(57, 189, 167, 0.7);
+  transform: scale(1.1);
+}
+
+/* Additional Animation Keyframes */
+@keyframes rotate {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(405deg);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+@keyframes slide {
+  0%,
+  100% {
+    transform: rotate(-45deg) translateX(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: rotate(-45deg) translateX(20px);
+    opacity: 1;
+  }
+}
+
 .hero-image {
   position: absolute;
   top: 50%;
@@ -74,11 +323,35 @@ header {
   opacity: 0.9;
   transition: all 0.3s ease;
   filter: drop-shadow(0 10px 25px rgba(55, 71, 79, 0.15));
+  animation: float 6s ease-in-out infinite;
+  z-index: 2;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(-50%) translateX(0);
+  }
+  50% {
+    transform: translateY(-50%) translateX(-10px);
+  }
 }
 
 .content {
   max-width: 100%;
   z-index: 2;
+  animation: fadeInLeft 1s ease-out 0.5s both;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .content h1 {
@@ -88,6 +361,18 @@ header {
   margin-bottom: 1rem;
   letter-spacing: -0.02em;
   line-height: 1.1;
+  animation: slideInDown 0.8s ease-out 0.7s both;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .content h2 {
@@ -95,6 +380,7 @@ header {
   font-size: 1.6rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
+  animation: slideInDown 0.8s ease-out 0.9s both;
 }
 
 .content p {
@@ -103,6 +389,7 @@ header {
   font-weight: 400;
   line-height: 1.6;
   margin-bottom: 2rem;
+  animation: slideInDown 0.8s ease-out 1.1s both;
 }
 
 .content-actions {
@@ -110,6 +397,18 @@ header {
   gap: 1rem;
   margin-top: 2rem;
   flex-wrap: wrap;
+  animation: fadeInUp 0.8s ease-out 1.3s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .btn-primary {
@@ -126,6 +425,28 @@ header {
   gap: 0.5rem;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(57, 189, 167, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
 }
 
 .btn-primary:hover {
@@ -148,6 +469,28 @@ header {
   align-items: center;
   gap: 0.5rem;
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-secondary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.btn-secondary:hover::before {
+  left: 100%;
 }
 
 .btn-secondary:hover {
@@ -169,12 +512,14 @@ header {
     var(--color-bg-blue) 0%,
     var(--color-accent-light) 100%
   );
+  animation: slideInUp 1.2s ease-out 0.2s both;
 }
 
 .hero-mobile-content {
   padding: 2rem;
   position: relative;
   z-index: 2;
+  animation: fadeInLeft 1s ease-out 0.5s both;
 }
 
 .hero-mobile-image {
@@ -187,24 +532,29 @@ header {
   height: auto;
   object-fit: contain;
   opacity: 0.7;
-  z-index: 1;
+  z-index: 2;
+  animation: float 6s ease-in-out infinite;
 }
 
 .hero-mobile-content h1 {
   font-size: 2.5rem;
+  animation: slideInDown 0.8s ease-out 0.7s both;
 }
 
 .hero-mobile-content h2 {
   font-size: 1.3rem;
+  animation: slideInDown 0.8s ease-out 0.9s both;
 }
 
 .hero-mobile-content p {
   font-size: 1rem;
+  animation: slideInDown 0.8s ease-out 1.1s both;
 }
 
 .hero-mobile-content .content-actions {
   flex-direction: column;
   align-items: flex-start;
+  animation: fadeInUp 0.8s ease-out 1.3s both;
 }
 
 /* Responsive Design */
